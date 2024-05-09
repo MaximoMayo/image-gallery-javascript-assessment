@@ -45,13 +45,19 @@ btn.addEventListener("click", () =>{
     //had to change from className to classList
     overlay.classList.toggle('darken')
 
+    //access to the class
     const currentClass = btn.getAttribute('class');
 
+    //check the value of the class with if and proceed to change it
     if(currentClass === 'dark') {
+        //change class att
         btn.setAttribute('class','light');
+        //then text
         btn.textContent = 'Lighten';
+        //then the overlay to darken
         overlay.style.backgroundColor = 'rgb(0 0 0 / 50%)';
     }
+    //no need for else if when there is only one other option
     else{
         btn.setAttribute('class','dark');
         btn.textContent = 'Darken';
